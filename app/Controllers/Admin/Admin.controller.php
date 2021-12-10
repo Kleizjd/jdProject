@@ -81,15 +81,35 @@ class Admin extends connection
         }
         echo json_encode(array("typeAnswer" => $typeAnswer, "message" => $message));
     }
-    public function editUser()
+    public function editPasswordEmail()
     {
-        $answer = array();
         extract($_POST);
-        if($user_password == $confirm_password){ 
-            
+        $typeAnswer = "error";
+        $message = "la contrasena actual no es correctassss";
+        $sqlVerify = "SELECT contrasena FROM usuario WHERE correo = '$email'";
+        $sql = $this->execute($sqlVerify);
+
+        if (mysqli_num_rows($sql) != 0) {
+            $row = $sql->fetch_assoc();
+            $password = $row['contrasena'];
+
+                if ($new_password == $confirm_password) {
+
+                    $utilities = new Utilities();
+                    $passEncrypt = $utilities->encriptPassword($new_password, 10, 22); //contraseña encriptada
+
+                    $sqlUpdate = "UPDATE usuario SET contrasena ='$passEncrypt' WHERE correo ='$email'";
+
+                    $sql = $this->execute($sqlUpdate);
+                    if ($sql != 0) {
+                        $typeAnswer = "success";
+                        $message = "Cambio de contraseña exitoso";
+                    }
+                } else {
+                    $typeAnswer = "warning";
+                    $message = " las contraseñas no coiciden";
+                }
         }
-        $sqlEditAcount = $this->execute("UPDATE user SET image_user ='$image_User' WHERE login ='$userID'");
-
-
+        echo json_encode(array("typeAnswer" => $typeAnswer, "message" => $message));
     }
 }

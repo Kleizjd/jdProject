@@ -38,8 +38,6 @@
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs profile-tab" role="tablist">
                                 <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#profile" role="tab">Perfil</a> </li>
-                                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab">Configuracion</a> </li>
-
                             </ul>
                             <!-- Tab panes -->
                             <div class="tab-content">
@@ -67,48 +65,6 @@
                                         <hr>
                                         <p class="m-t-30"><?= $infoUsers["descripcion_persona"]; ?></p>
                                         <a href="#" id="viewNotify">Regresar</a>
-                                    </div>
-                                </div>
-                                <!-- Second tab -->
-                                <div class="tab-pane" id="settings" role="tabpanel">
-                                    <div class="card-body">
-                                        <form class="form-horizontal form-material" action="" method="post" id="form_info">
-                                            <div class="form-group">
-                                                <label class="col-md-12">Nombre Completo</label>
-                                                <div class="col-md-12">
-                                                    <input type="text" placeholder="<?= $infoUsers["nombre_completo"]; ?>" class="form-control form-control-line">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="example-email" class="col-md-12">Email</label>
-                                                <div class="col-md-12">
-                                                    <input type="email" placeholder="<?= $infoUsers["correo"]; ?>" class="form-control form-control-line" name="example-email" id="example-email">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="col-md-12">Celular</label>
-                                                <div class="col-md-12">
-                                                    <input type="text" id="user_cellphone" placeholder="<?= $infoUsers["celular"]; ?>" class="form-control form-control-line">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="col-md-12">Contrase&ntilde;a</label>
-                                                <div class="col-md-12">
-                                                    <input type="password" id="user_password" class="form-control form-control-line">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="col-md-12">Confirmar Contrase&ntilde;a</label>
-                                                <div class="col-md-12">
-                                                    <input type="password" id="confirm_password" class="form-control form-control-line">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="col-sm-12">
-                                                    <button type="submit" class="btn btn-success">Actualizar Perfil</button>
-                                                </div>
-                                            </div>
-                                        </form>
                                     </div>
                                 </div>
                             </div>

@@ -69,7 +69,8 @@
                                         <span>Nombre</span>
                                     </div>
                                     <div class="col-sm col-lg">
-                                        <span id="complete_name"><?= $_SESSION['nombre_completo'] ?></span>
+                                    <div id="complete_name"><?= $_SESSION['nombre_completo']; ?></div>
+
                                     </div>
                                     <div class="col-sm col-lg">
                                         <button class="btn btn-primary" id="editName">cambiar</button>

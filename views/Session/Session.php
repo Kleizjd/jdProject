@@ -26,19 +26,11 @@
                     <div class="justify-content-center row">
                         <div class="col-10">
                             <h1> Ingreso</h1>
-                            <!-- <span> -->
-                            <!-- <img src="../../public/img/favicon/favicon.ico" alt="ingesoftware" height="50" width="200"> -->
-                            <!-- <img  class="card-img-top" src="assets/images/background/Cuentame.jpg" alt="ingesoftware" height="50" width="200"> -->
-                            <!-- </span> -->
                         </div>
                     </div>
                     <div class="card-body">
                         <form class="form-horizontal form-material" id="form_session" action="" method="POST" autocomplete="off">
-                            <!-- <form class="form-horizontal form-material" id="loginform" action="index.html"> -->
-
-                            <!-- <h3 class="box-title m-b-20">Registrarse</h3> -->
                             <div class="form-group ">
-                                <!-- <input class="form-control" type="text" required="" placeholder="Username"> </div> -->
                                 <input type="text" class="form-control" placeholder="Login" name="user" id="user" autofocus required>
                             </div>
                             <div class="input-group form-group">
@@ -59,18 +51,9 @@
                             </div>
                             <div class="form-group text-center">
                                 <div class="col-xs-12 p-b-20">
-                                    <!-- <input type="submit" class="btn btn-lg btn-primary btn-block" value="Ingresar"> -->
                                     <button class="btn btn-block btn-lg btn-info btn-rounded" type="submit" id="cargar">Ingresar</button>
                                 </div>
                             </div>
-                            <!-- <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
-                                    <div class="social">
-                                        <a href="javascript:void(0)" class="btn  btn-facebook" data-toggle="tooltip" title="Login with Facebook"> <i aria-hidden="true" class="fab fa-facebook"></i> </a>
-                                        <a href="javascript:void(0)" class="btn btn-googleplus" data-toggle="tooltip" title="Login with Google"> <i aria-hidden="true" class="fab fa-google-plus-g"></i> </a>
-                                    </div>
-                                </div>
-                            </div> -->
                             <div class="form-group m-b-0">
                                 <div class="col-sm-12 text-center">
                                     No tienes cuenta? <a href="pages-register.html" class="text-info m-l-5"><b>Registrate</b></a>
@@ -105,19 +88,14 @@
     </section>
 
 </body>
-<!-- <script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script> -->
 <script src="vendor/sweetalert/js/sweetalert2.min.js"></script>
 <script src="vendor/popper/popper.min.js"></script>
-<!-- <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script> -->
 
 </html>
 <script>
     $(function() {
         $(".preloader").fadeOut();
     });
-    // $(function() {
-    //     $('[data-toggle="tooltip"]').tooltip()
-    // });
     // ============================================================== 
     // Login and Recover Password 
     // ============================================================== 
@@ -131,7 +109,6 @@
     });
     $(document).ready(function() {
 
-        // $("#cargar").click();
         $(document).on("click", ".showPassword", function() {
             let inputPassword = $(this).parent().find("input");
             if ($(inputPassword).val() != "") {
@@ -189,36 +166,14 @@
 
                 }
             }).done((res) => {
-                // alert("hey")
-                // alert(res.typeAnswer)
                 if (res.typeAnswer == true) {
-
-                    
                     swal({
-                        title: "Usuario o Contraseña incorrectos",
-                        type: "error"
+                        title: "Correo de Verificacion enviado",
+                        type: "success"
                     });
                 }
-          
             });
-
         });
     });
 
-
-    //De manera general, se trabaja así:
-    // $.when(function1()).then(function2());
-
-    // function btnclick(_url){
-    //     $.ajax({
-    //         url : _url,
-    //         type : 'post',
-    //         success: function(data) {
-    //          $('#DIVID').html(data);
-    //         },
-    //         error: function() {
-    //          $('#DIVID').text('An error occurred');
-    //         }
-    //     });
-    // }
 </script>
