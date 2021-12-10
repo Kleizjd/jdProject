@@ -770,8 +770,6 @@ ul.social li a {
 	display: inline-block;
 	width: 30px;
 	height: 30px;
-	/* background: url("C:/xampp/htdocs/www/Versiones-PscicoApp/pjCristhian/assets/images/cars/img-sprite-2.png") no-repeat 0px 0px; */
-	/* background: url("../images/img-sprite-2.png") no-repeat 0px 0px; */
 	background: url("../../../images/social-media/img-sprite-2.png") no-repeat 0px 0px;
 	
 	background-size: 90px;
@@ -1018,7 +1016,7 @@ a.mail:hover {
 	display: inline-block;
 	width: 30px;
 	height: 30px;
-	background: url("../../../images/cars/spg") no-repeat 0px 0px;
+	background: url("../../../images/social-media/img-sprite.png") no-repeat 0px 0px;
 	background-size: 300px;
 }
 .connect-social ul li a.facebook {

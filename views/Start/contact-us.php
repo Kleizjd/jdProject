@@ -2,7 +2,7 @@
    /*-- Contact --*/
    .contact {
       background-size: cover;
-      background: url("assets/salud_mental.jpg");
+      background: url("assets/images/background/salud_mental.jpg");
       background-repeat: no-repeat;
       background-position: center;
       padding: 6% 0;

@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="vendor/bootstrap-4.4.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="vendor/sweetalert/css/sweetalert2.min.css">
-    <link href="assets/dist/css/pages/login-register-lock.css" rel="stylesheet">
+    <link href="assets/template/my-css-js/css/login-register-lock.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="assets/dist/css/style.min.css" rel="stylesheet">
+    <link href="assets/template/my-css-js/css/style.min.css" rel="stylesheet">
 
 
 </head>
