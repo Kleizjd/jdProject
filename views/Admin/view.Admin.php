@@ -12,7 +12,7 @@
             <li class="nav-item">
                 <a class="nav-link active" data-toggle="tab" href="#myProfile" role="tab">Mi perfil</a>
             </li>
-    
+
         </ul>
     </div>
     <div class="card-body">
@@ -24,7 +24,8 @@
                             <div class="col-sm col-lg">
                                 <div class="card-header">
                                     <form id="frm_UploadImage" method="POST">
-                                        <?php foreach ($Admin as $admin) {} ?>
+                                        <?php foreach ($Admin as $admin) {
+                                        } ?>
                                         <div class="row">
                                             <div class="text-center col-12">
                                                 <div class="font-weight-bold" style="font-size: 18px;" id="complete_name"><?= $_SESSION['nombre_completo']; ?><span></span></div>
@@ -69,8 +70,7 @@
                                         <span>Nombre</span>
                                     </div>
                                     <div class="col-sm col-lg">
-                                    <div id="complete_name"><?= $_SESSION['nombre_completo']; ?></div>
-
+                                        <div id="complete_name_field"><?= $_SESSION['nombre_completo']; ?></div>
                                     </div>
                                     <div class="col-sm col-lg">
                                         <button class="btn btn-primary" id="editName">cambiar</button>
@@ -84,14 +84,14 @@
                                         </div>
                                         <div class="col-sm-4 col-lg-4">
                                             <input type="text" class="form-control" name="name_user" id="name_user" value="<?php $nombres = $_SESSION['nombres'];
-                                                                                                                                    echo " " . $nombres; ?>">
+                                                                                                                            echo " " . $nombres; ?>">
                                         </div>
                                         <div class="col-sm-2 col-lg-2">
                                             <label class="pt-2" for="lastName">Apellidos</label>
                                         </div>
                                         <div class="col-sm-4 col-lg-4">
                                             <input type="text" class="form-control" name="lastName" id="lastName" value="<?php $apellidos = $_SESSION['apellidos'];
-                                                                                                                                 echo " " . $apellidos; ?>">
+                                                                                                                            echo " " . $apellidos; ?>">
                                         </div>
 
                                     </div>
@@ -297,11 +297,13 @@
             }).done((res) => {
                 if (res.typeAnswer == "success") {
 
-                    $('#complete_name_window').text(res.nombre + " " + res.apellido);
                     $('#complete_name').text(res.nombre + " " + res.apellido);
+
                     swal({
                         title: res.message,
                         type: res.typeAnswer
+                    }).then(function(isConfirm) {
+                        $("#complete_name_field").html(res.nombre + " " + res.apellido);
                     })
                 }
 

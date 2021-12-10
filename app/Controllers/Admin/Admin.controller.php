@@ -14,6 +14,12 @@ class Admin extends connection
 
         include_once "../../views/Admin/view.Admin.php";
     }
- 
-    
+    public function listUsers(){ 
+        extract($_POST);
+
+    }
+    public function editUser(){ 
+        extract($_POST);
+
+    }
 }

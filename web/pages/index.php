@@ -61,7 +61,7 @@ date_default_timezone_set("America/Bogota");
                     </div>
                 </div>
                 <footer class="footer">
-                    <span> &copy;Copyright <?= date("Y"); ?> Best -Cristhian Hernandez y Ivan</span>
+                    <span> &copy;Copyright <?= date("Y"); ?> Best -José Daniel Grijalba</span>
                 </footer>
             </div>
             <?php include_once "../partials/log-out.php"; ?>

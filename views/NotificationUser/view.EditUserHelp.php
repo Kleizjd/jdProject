@@ -108,7 +108,6 @@ $(document).ready( function(){
 				processData: false,
 				contentType: false
 			}).done((res) => {
-                // alertify.notify(res.mensaje, res.tipoRespuesta, 4);
                 swal({ title: 'Producto modificado exitosamente', type: 'success', });
 			});
 		});
@@ -116,7 +115,6 @@ $(document).ready( function(){
     $(function deleteProduct() {
         $(document).on("click", "#deleteProduct", function () {
             let status = $("#statProduct").text();
-            // alert(status);
             
             if(status = "Existente"){
                 
@@ -146,8 +144,6 @@ $(document).ready( function(){
                             contentType: false
                         }).done((res) => {
                             if (res.typeAnswer == true) {
-                                // alertify.notify(res.mensaje, res.tipoRespuesta, 4);
-
                                 swal({ title: 'Producto Eliminada exitosamente', type: 'success', });
                             } 
                         });

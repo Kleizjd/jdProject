@@ -88,7 +88,6 @@ $(document).on("change", ".subirArchivo", function (e) {
 				}).done((res) => {
 					if (res.typeAnswer == true) {
 						let archivoSinExtension = res.archivo.substring(0, res.archivo.lastIndexOf("."));
-						// $("#img_profile").attr("src", res.rutaCompleta);
 
 						$(this).parent().parent().find(".nombreArchivo").text("Cargando..");
 						$(this).parent().parent().find("label").find("img").prop({

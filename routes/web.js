@@ -22,22 +22,4 @@ $(document).ready(function() {
         });
     });
     // -------------------------------------------------------------//
-    /****SHOW MODAL Search HELPUSER****/
-    $(document).on("click", "#SearchUser", function() {
-
-        $.ajax({
-            url: "../../app/lib/ajax.php",
-            method: "post",
-            data: {
-                module: "HelpUser",
-                controller: "HelpUser",
-                nameFunction: "modalSearchHelpUser",
-            }
-        }).done((res) => {
-            $("#modalSearchHelpUser .modal-body").html(res);
-            $("#modalSearchHelpUser").modal({ backdrop: "static", keyboard: false });
-        });
-    });
-
-    // -------------------------------------------------------------//
 });
