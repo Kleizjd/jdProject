@@ -202,8 +202,8 @@
             event.preventDefault();
             var formData = new FormData(event.target);
 
-            formData.append('module', 'Admin');
-            formData.append('controller', 'Admin');
+            formData.append('module', 'Session');
+            formData.append('controller', 'Session');
             formData.append('nameFunction', 'editEmail');
             formData.append('email', $("#userId").val());
 
@@ -235,8 +235,8 @@
             var formData = new FormData(event.target);
 
 
-            formData.append('module', 'Admin');
-            formData.append('controller', 'Admin');
+            formData.append('module', 'Session');
+            formData.append('controller', 'Session');
             formData.append('nameFunction', 'editPassword');
             formData.append('email', $("#userId").val());
 
@@ -281,8 +281,8 @@
             var formData = new FormData(event.target);
 
 
-            formData.append('module', 'Admin');
-            formData.append('controller', 'Admin');
+            formData.append('module', 'Session');
+            formData.append('controller', 'Session');
             formData.append('nameFunction', 'editName');
             formData.append('email', $("#userId").val());
 

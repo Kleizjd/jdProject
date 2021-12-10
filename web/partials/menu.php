@@ -15,7 +15,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="waves-effect waves-dark" id="viewAcount" aria-expanded="false">
+						<a class="waves-effect waves-dark" id="viewOwnAcount" aria-expanded="false">
 							<i class="ti-settings"></i>
 							<span class="hide-menu">Configuracion</span>
 						</a>

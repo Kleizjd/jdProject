@@ -88,6 +88,7 @@ $(document).on("change", ".subirArchivo", function (e) {
 				}).done((res) => {
 					if (res.typeAnswer == true) {
 						let archivoSinExtension = res.archivo.substring(0, res.archivo.lastIndexOf("."));
+						// $("#img_profile").attr("src", res.rutaCompleta);
 
 						$(this).parent().parent().find(".nombreArchivo").text("Cargando..");
 						$(this).parent().parent().find("label").find("img").prop({
@@ -95,7 +96,16 @@ $(document).on("change", ".subirArchivo", function (e) {
 							alt: "Cargando...",
 							title: "Cargando..."
 						});
-
+						$("#img_profile_header").parent().parent().find("a").find("img").prop({
+							src: res.ruta,
+							alt: archivoSinExtension,
+							title: archivoSinExtension
+						});
+						// $("#img_profile_herence_carga").parent().parent().find("a").find("img").prop({
+						// 	src: res.ruta,
+						// 	alt: archivoSinExtension,
+						// 	title: archivoSinExtension
+						// });
 						setTimeout(() => {
 							$(this).parent().parent().find(".nombreArchivo").text(res.archivo);
 							if ($(this).parent().parent().find(".borrarArchivo").length == 1) {
@@ -108,10 +118,13 @@ $(document).on("change", ".subirArchivo", function (e) {
 								alt: archivoSinExtension,
 								title: archivoSinExtension
 							});
-							$(this).parent().find(".ContenedorPrevisualizarArchivo").html(
-								`<i class="text-primary fa fa-eye fa-2x previsualizarArchivo" style="cursor: pointer;" data-file=${encriptar(archivo.name + "|" + reader.result)} title="Ver archivo"></i>`
-							);
+							
+
+							// $(this).parent().find(".ContenedorPrevisualizarArchivo").html(
+							// 	`<i class="text-primary fa fa-eye fa-2x previsualizarArchivo" style="cursor: pointer;" data-file=${encriptar(archivo.name + "|" + reader.result)} title="Ver archivo"></i>`
+							// );
 						}, 2000);
+
 					}
 				});
 			} else {

@@ -84,8 +84,8 @@
 				var formData = new FormData(event.target);
 
 
-				formData.append('module', 'Admin');
-				formData.append('controller', 'Admin');
+				formData.append('module', 'Session');
+				formData.append('controller', 'Session');
 				formData.append('nameFunction', 'editPasswordEmail');
 				formData.append('email', $("#user_email").val());
 

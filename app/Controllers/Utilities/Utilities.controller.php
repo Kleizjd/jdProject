@@ -44,6 +44,8 @@ class Utilities extends connection {
                         $answer["typeAnswer"] = true;
                         $answer["archivo"] = $Archivo;
                         $answer["ruta"] = $RutaCompleta;
+                        // echo "miremos".$answer["archivo"];
+                        // echo "miremos".$answer["ruta"];
                     }
                 }
             }

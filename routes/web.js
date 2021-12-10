@@ -1,11 +1,12 @@
 
 // Este archivo es usado para llamar las vistas de la plantilla ya habiendo iniciado seccion
 $(document).ready(function() {
-    $(function viewAcount() {
-        $(document).on("click", "#viewAcount", function() {
+    $(function viewOwnAcount() {
+        $(document).on("click", "#viewOwnAcount", function() {
             let userId = new Object();
             userId["userId"] = $("#userId").val();
-            callView("Admin", "Admin", "viewAcount", userId);
+			$("#img_profile_herence").attr("src", $("#img_profile").attr("src"));
+            callView("Admin", "Admin", "viewOwnAcount", userId);
         });
     });
     //======================[  Meeting/Reunion  ]=========================//	

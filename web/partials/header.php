@@ -13,21 +13,21 @@
 				<!-- ============================================================== -->
 				<!-- Comment -->
 				<!-- ============================================================== -->
-				<?php if ($_SESSION["rol_usuario"] == 1): ?>
-				<li class="nav-item dropdown">
-					<a class=" nav-link dropdown-toggle waves-effect waves-dark " href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="viewNotify"> <i class="ti-bell"></i>
-						<div class="notify" id="active_notify"> <span class="heartbit"></span> <span class="point"></span> </div>
-					</a>
-				</li>
+				<?php if ($_SESSION["rol_usuario"] == 1) : ?>
+					<li class="nav-item dropdown">
+						<a class=" nav-link dropdown-toggle waves-effect waves-dark " href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="viewNotify"> <i class="ti-bell"></i>
+							<div class="notify" id="active_notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+						</a>
+					</li>
 				<?php endif; ?>
 			</ul>
 			<ul class="navbar-nav my-lg-0">
-				<li class="nav-item dropdown">
+				<li class="nav-item dropdown" id="img_profile_header">
 					<a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../../assets/images/svg/upload-user.svg" alt="user" id="img_profile" class="img-circle" width="30"></a>
 					<div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
 						<span class="with-arrow"><span class="bg-primary"></span></span>
 						<div class="d-flex no-block align-items-center p-15 bg-primary text-white m-b-10">
-							<div class=""><img src="../../assets/images/svg/upload-user.svg" alt="user" id="img_profile_herence" class="img-circle" width="60"></div>
+							<div class="" id="img_profile_herence_carga"><img src="../../assets/images/svg/upload-user.svg" alt="user" id="img_profile_herence" class="img-circle" width="60"></div>
 							<div class="m-l-10">
 								<h4 class="m-b-0" id="complete_name_window"><?= $_SESSION['nombre_completo']; ?></h4>
 								<p class=" m-b-0">
@@ -35,7 +35,7 @@
 							</div>
 						</div>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="javascript:void(0)" id="viewAcount"><i class="ti-settings m-r-5 m-l-5"></i>Configuracion</a>
+						<a class="dropdown-item" href="javascript:void(0)" id="viewOwnAcount"><i class="ti-settings m-r-5 m-l-5"></i>Configuracion</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-power-off m-r-5 m-l-5"></i> Salir</a>
 						<div class="dropdown-divider"></div>
@@ -51,11 +51,6 @@
 	<script>
 		$(document).ready(function() {
 			//________________________IMAGEN USUARIO DE PERFIL_______________________________
-			$(function imageHerence() {
-				$("#img_profile").click(function() {
-					$("#img_profile_herence").attr("src", $("#img_profile").attr("src"));
-				});
-			});
 			$(function loadImageUser() {
 				$.ajax({
 					url: '../../app/lib/ajax.php',
@@ -71,25 +66,11 @@
 					$("#img_profile").attr("src", "../../views/Admin/Files/" + res.address);
 				});
 			});
-			//_____________________________________________________________________________
-			//_________________BUSQUEDA INFORMACION DEL FORMULARIO PACIENTE________________|
-			$(".select2").select2({
-				width: "300px",
-				theme: "classic"
-
-			});
-			$(function selectEmails() {
-				$.ajax({
-					url: "../../app/lib/ajax.php",
-					method: "post",
-					data: {
-						module: "Survey",
-						controller: "Survey",
-						nameFunction: "selectEmail"
-					},
-				}).done((res) => {
-					$("#correo").html(res);
+			$(function imageHerence() {
+				$("#img_profile").click(function() {
+					$("#img_profile_herence").attr("src", $("#img_profile").attr("src"));
 				});
+
 			});
 			//_____________________________________________________________________________
 			//________________________NOTIFICACIONES REUNION_______________________________|
@@ -173,5 +154,3 @@
 	<!-- ============================================================== -->
 	<!-- End Right sidebar -->
 	<!-- ============================================================== -->
-
-	
