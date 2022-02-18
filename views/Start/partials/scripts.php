@@ -24,8 +24,6 @@
     </script>
     <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 0;"> </span></a>
     <!-- //Slide-To-Top JavaScript -->
-    <!-- Owl-Carousel-JavaScript -->
-    <script src="assets/template/my-css-js/js/owl.carousel.js"></script>
     <script>
         $(document).ready(function() {
             $("#owl-demo").owlCarousel({
