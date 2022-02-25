@@ -196,13 +196,19 @@ class Session extends connection
                 
     
                 $mens_email = str_replace("<ENLACE>", $link, $mens_email);
-            	$cabecera = "MIME-Version: 1.0"."\r\n"."Content-type:text/html;charset=UTF-8"."\r\n"."From: jose.jdgo97@gmail.com"."\r\n"."Reply-To: jose.jdgo97@gmail.com"."\r\n"."X-Mailer: PHP/" . phpversion();
+            	$estructura = "MIME-Version: 1.0"."\r\n";
+                $estructura.= "Content-type:text/html;charset=UTF-8"."\r\n";
+                $estructura.= "From: jose.jdgo97@gmail.com"."\r\n";
+                $estructura.= "=Reply-To: jose.jdgo97@gmail.com";
+                $estructura.= "\r\n"."X-Mailer: PHP/" . phpversion();
 
-            	mail($email_user, $asunto, $mens_email, $cabecera);
+            	$m = mail($email_user, $asunto, $mens_email, $estructura);
+                // var_dump($m);
+               echo "".$estructura;
 
             	$mensaje = "Se ha enviado un correo a su bandeja de entrada. Por favor verifique su correo.";
             	$mensaje .= "<br><br>".$link;
-                $answer['typeAnswer'] = true;
+                // $answer['typeAnswer'] = true;
         } else {
           $answer['typeAnswer'] = false;
         }
