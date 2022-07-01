@@ -36,8 +36,9 @@
 <link rel="stylesheet" href="../../vendor/alertify/css/alertify.min.css?v=<?= rand(); ?>">
 <!-- Default theme -->
 <link rel="stylesheet" href="../../vendor/alertify/css/themes/default.min.css?v=<?= rand(); ?>">
-<link rel="stylesheet" href="../../assets/template/dist/css/style.min.css?v=<?= rand(); ?>">
-<link rel="stylesheet" href="../../assets/template/my-css-js/css/my-styles.css">
+<link rel="stylesheet" href="../../assets/template/dist/css/style.css?v=<?= rand(); ?>">
+<!-- <link rel="stylesheet" href="../../assets/template/dist/css/style.min.css?v=<?= rand(); ?>"> -->
+<!-- <link rel="stylesheet" href="../../assets/template/my-css-js/css/my-styles.css">     -->
 <link href="../../vendor/c3-master/c3.min.css" rel="stylesheet">
 <link href="../../vendor/morrisjs/morris.css" rel="stylesheet">
 <!--Toaster Popup message CSS -->
